@@ -7,12 +7,17 @@ and open the template in the editor.
     Created on : 31 ene. 2021, 21:32:02
     Author     : Usuario
 */
+body {
+    background-image: url(../imagenes/1609-maquillaje.jpg);
+}
 .grid-container {
   display: flex;
   flex-direction: row;
   grid-auto-columns: 40px 40px 40px;
   grid-auto-rows: 40px;
-  border-style: solid;
+  border-style: solid; 
+  font-size: 30px;
+  background-color: aquamarine;
 }
 .item {
     flex-grow: 3;
@@ -22,19 +27,27 @@ and open the template in the editor.
     display:flex;
     flex-direction:row;
     grid-auto-rows: 150px 150px 150px;
-    justify-content: space-between;
-   
+    justify-content: space-between; 
+    background-color: 
     
+}
+.social{
+   display: flex;
+   flex-direction: row-reverse;
+   font-size: 40px;
 }
 .foto { padding: 10px; margin: 10px; border: 2px solid black; float: left; width: 250px; 
 }
 .iconos {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+    
 }
+
+
 .icono {
-    height: 1 px;
-    width: 1 px;
+    height: 200px;
+    width: 1000px;
 }
  .menu li {
     
