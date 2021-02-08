@@ -73,14 +73,15 @@ and open the template in the editor.
 
 
 
-        <footer>
-            <p>
-                &#169; 2021   contacto:info@goro.com    
-                
-            </p>
-        </footer>
+
+
+        
+        
+        
         
         <?php 
+        include 'footer.php'
+       
   
         ?>
     </body>
