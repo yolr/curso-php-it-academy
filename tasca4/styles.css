@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 feb. 2021, 15:04:42
+    Author     : Usuario
+*/
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+#fondo {
+    background-image: url('img/fondo.jpg');
+    background-size:cover;
+    padding-top: 90px;
+    min-height: 700px;
+    color: #ffffff;
+}
+
