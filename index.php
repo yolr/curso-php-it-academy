@@ -1,77 +1,84 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author"content="Yolanda Raventos">
-        <meta name="description"content="Primera pagina web">
-        <meta name="viewport" content="2width=devide-width, inital-scale=1.0"> 
-        <link rel="stylesheet" href="./css/estilos.css">
-        <title>GORO TRADE 3000</title>
 
-                     
-    </head>
+<?php include ('db.php')?>
+<?php include ('includes/header.php')?>
+
+<div class='container p-6'>
     
-    <body>
-        <header>
-            <h1>GORO TRADE 3000</h1>
+    <div class='col-md-6'>
+        
+        <div class='card card-body'>
+            <form action ='save_venta.php'method='post'>
+                  <label for="nom">Producto:</label>
+                    <input type="text" id="nom" name="nom" autofocus><br><br>
+                    
+                    <label for="quantitat">Quantitat</label>
+                    <input type="text" id="quantitat" name="quantitat"><br><br>
+                    
+                    <label for="preu">Preu</label>
+                    <input type="text" id="preu" name="preu"><br><br>
+                    
+                    
+                    <input type="submit" name='save_venta' value='Guardar'>
+
+            </form>
             
-          <div class="iconos">
-         
-            <img class="icono" src="imagenes/logo_goro.png" />
-            <img class="icono" src="imagenes/logo_goro.png" />
-            <img class="icono" src="imagenes/logo_goro.png" />
-           </div>
-            
-                        
+         </div>
+        
+    </div>
+    
+    <div class='col-md-8'>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Producte</th>
+                    <th>Quantitat</th>
+                    <th>Total</th>
+                    <th>Acción</th>
+                
+                </tr>
+                
+            </thead>>
+            <tbody>
+                <?php
+                $alta='SELECT * FROM venta';
+                $res=mysqli_query($conn, $alta);
+                
+                while($row= mysqli_fetch_array($res)){?>
+                
+                    <tr>
+                        <td><?php echo $row['Nom'] ?></td>
+                        <td><?php echo $row['Quantitat'] ?></td><!-- comment -->
+                        <td><?php echo $row['preu']*$row['Quantitat'] ?></td>
+                        <<td>
+                            
+                            <a href="edit.php?id=<?php echo $row['idProducte']?>" class="btn btn-secondary">
+                                <i class="fas fa-marker"></i>
+                            </a> 
+                            
+                            <a href="delete.php?id=<?php echo $row['idProducte']?>"class="btn btn-danger">
+                               <i class="fas fa-trash-alt"></i> 
+                            </a><!-- comment -->
+                            
+                            
+                                                        
+
+                       </td>
+                    </tr>
+                    
+                <?php } ?>
+                
+               
+                
+                
            
-        </header>
-        
-        <nav >
-            <ul class="menu">
-                <li><a href="#">Menu1</a></li>
-                <li><a href="#">Menu2</a></li>
-                <li><a href="#">Menu3</a></li>
-                <li><a href="#">Menu4</a></li>
-                <li><a href="#">Menu4</a></li>
-            </ul>        
-                        
-        </nav>
-        <div class="grid-container">
-            <div class="item">Maquillage infantil</div>
-            <div class="item">Maquillaje adulto</div>
-            <div class="item">Crema cosmetica</div>
             
-        </div>
             
-        <div class="grid-container2"  > 
-             <article>
-                <h2>El mejor maquillage</h2>
-                <p>Seleccion y maquetación personalizada</p>
-                <img class="foto" src="imagenes/Adulto.jpg" />
-             </article>
-             <article>
-                <h2>Con su mejor packaging</h2>
-                <p>Packaging totalmente en carton</p>
-                <img class="foto" src="imagenes/Packaging.jpg" />
-             </article>
-             <article>
-                <h2>Ingredientes veganos</h2>
-                <p>Todos los ingredientes son naturales y veganos</p>
-                <img class="foto" src="imagenes/ingredientes.jpg" />
-             </article>
-            
-        </div>   
-            
-
+        </table>
         
-
-
-
+    </div>
+    
+</div>
+<?php include ('includes/footer.php')?>
 
 
 
@@ -79,10 +86,6 @@ and open the template in the editor.
         
         
         
-        <?php 
-        include 'footer.php'
-       
-  
-        ?>
-    </body>
-</html>
+     
+
+
