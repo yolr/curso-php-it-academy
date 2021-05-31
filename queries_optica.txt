@@ -1,0 +1,6 @@
+SELECT * FROM optica.clients where Nom_client = "maria garcia";
+
+SELECT *
+FROM clients
+INNER JOIN ventes
+	ON clients.Clients_id_clientes=ventes.Clients_id_clientes;
