@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "dd430ace-62e5-4de6-a5c5-b81d495ec588",
+		"name": "Tasca 10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/curso-php-it-academy/tasca_10/public/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"curso-php-it-academy",
+						"tasca_10",
+						"public",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/curso-php-it-academy/tasca_10/public/catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"curso-php-it-academy",
+						"tasca_10",
+						"public",
+						"catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detalle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/curso-php-it-academy/tasca_10/public/catalog/show/tom sawyer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"curso-php-it-academy",
+						"tasca_10",
+						"public",
+						"catalog",
+						"show",
+						"tom sawyer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/curso-php-it-academy/tasca_10/public/catalog/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"curso-php-it-academy",
+						"tasca_10",
+						"public",
+						"catalog",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/curso-php-it-academy/tasca_10/public/catalog/edit/tom sawyer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"curso-php-it-academy",
+						"tasca_10",
+						"public",
+						"catalog",
+						"edit",
+						"tom sawyer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
