@@ -1,15 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
-use Facade\FlareClient\View;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
-{
-    public function __invoke(){
 
-        return view ('home');
-    //
-}
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function __invoke()
+    {
+        return view('home');
+    }
 }

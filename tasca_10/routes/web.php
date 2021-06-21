@@ -23,3 +23,10 @@ Route::get('catalog',[LlistaController::class, 'index']);
 Route::get('catalog/show/{id}',[LlistaController::class, 'show']);
 Route::get('catalog/edit/{id}',[LlistaController::class, 'edit']);
 Route::get('catalog/create',[LlistaController::class, 'create']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
